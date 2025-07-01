@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 body {
-  background: #909EAE;
+  background: #FDFBD4;
   font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
-  color: #736F60;
+  color: #545333;
 }
 
 .container {
   max-width: 900px;
   margin: 40px auto;
-  background: #AD9E90;
+  background: #D9D7B6;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(92,141,197,0.12);
+  box-shadow: 0 4px 24px rgba(135,134,114,0.12);
   overflow: hidden;
   position: relative;
 }
@@ -25,7 +25,7 @@ nav ul {
   list-style: none;
   padding: 24px 40px 0 40px;
   margin: 0;
-  background: #5C8DC5;
+  background: #878672;
   border-radius: 12px 12px 0 0;
 }
 
@@ -42,26 +42,26 @@ nav ul .logo {
   text-align: center;
   line-height: 1;
   letter-spacing: 2px;
-  color: #AD9E90;
+  color: #D9D7B6;
 }
 
 nav ul li a {
-  color: #AD9E90;
+  color: #D9D7B6;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 nav ul li a:hover {
-  color: #736F60;
+  color: #545333;
 }
 
 nav input[type="text"] {
   padding: 6px 12px;
   border-radius: 20px;
-  border: 1px solid #736F60;
+  border: 1px solid #545333;
   font-size: 1em;
-  background: #AD9E90;
-  color: #736F60;
+  background: #D9D7B6;
+  color: #545333;
 }
 
 .main-content {
@@ -69,7 +69,7 @@ nav input[type="text"] {
   flex-direction: row;
   padding: 40px;
   gap: 40px;
-  background: #909EAE;
+  background: #FDFBD4;
 }
 
 .left {
@@ -85,18 +85,18 @@ nav input[type="text"] {
   object-fit: cover;
   border-radius: 8px;
   filter: grayscale(100%);
-  box-shadow: 0 2px 16px rgba(92,141,197,0.15);
+  box-shadow: 0 2px 16px rgba(135,134,114,0.15);
 }
 
 .right {
   flex: 2;
-  color: #736F60;
+  color: #545333;
 }
 
 .right h4 {
   margin: 0;
   font-weight: normal;
-  color: #5C8DC5;
+  color: #878672;
   letter-spacing: 1px;
 }
 
@@ -105,26 +105,26 @@ nav input[type="text"] {
   font-size: 2.2em;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #5C8DC5;
+  color: #878672;
 }
 
 .right .date {
-  color: #736F60;
+  color: #545333;
   font-size: 0.95em;
   margin-bottom: 18px;
 }
 
 .right blockquote {
   font-style: italic;
-  color: #736F60;
-  background: #AD9E90;
-  border-left: 4px solid #5C8DC5;
+  color: #545333;
+  background: #D9D7B6;
+  border-left: 4px solid #878672;
   margin: 18px 0;
   padding: 12px 18px;
 }
 
 ul, .skills-list {
-  color: #736F60;
+  color: #545333;
   font-size: 1.1em;
   padding-left: 20px;
 }
@@ -165,8 +165,8 @@ section {
 footer {
   text-align: center;
   padding: 10px;
-  background: #5C8DC5;
-  color: #AD9E90;
+  background: #878672;
+  color: #D9D7B6;
   position: fixed;
   width: 100%;
   bottom: 0;
