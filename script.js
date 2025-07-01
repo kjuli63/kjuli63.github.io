@@ -47,23 +47,22 @@ window.addEventListener('DOMContentLoaded', function() {
     appearOnScroll.observe(fader);
   });
 
-  // Send message button animation
+  // Send message button animation (now using sendVideo in contact-illustration)
   const sendBtn = document.getElementById('sendBtn');
-  const sendAnimation = document.getElementById('sendAnimation');
   const sendVideo = document.getElementById('sendVideo');
   const contactForm = document.querySelector('.contact-form');
 
-  if (sendBtn && sendAnimation && sendVideo && contactForm) {
+  if (sendBtn && sendVideo && contactForm) {
     sendBtn.addEventListener('click', function(e) {
       e.preventDefault(); // Prevent form submission
       sendBtn.style.display = 'none';
-      sendAnimation.style.display = 'inline-block';
+      sendVideo.style.display = 'inline-block';
       sendVideo.currentTime = 0;
       sendVideo.play();
     });
 
     sendVideo.addEventListener('ended', function() {
-      sendAnimation.style.display = 'none';
+      sendVideo.style.display = 'none';
       sendBtn.style.display = 'inline-block';
     });
   }
