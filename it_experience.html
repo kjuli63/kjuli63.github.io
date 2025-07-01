@@ -17,7 +17,8 @@
     </nav>
     <div class="main-content">
         <div class="left">
-            <img src="photos/_KO_0943.JPG" alt="BEST Hackathon 2025" style="max-width: 100%; border-radius: 16px; display: block;">
+            <img src="photos/_KO_0943.JPG" alt="BEST Hackathon 2025" id="itExpImg" style="cursor: pointer;">
+            <div style="text-align: center; margin-top: 8px; font-weight: bold; color: #0A3C30;">BEST Hackathon 2025</div>
         </div>
         <div class="right">
             <ul class="skills-list">
@@ -30,6 +31,32 @@
         </div>
     </div>
 </div>
-<script src="script.js"></script>
+
+<!-- Modal for full image -->
+<div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+  <span id="closeModal" style="position:absolute; top:32px; right:48px; color:#fff; font-size:2.5em; cursor:pointer; font-weight:bold;">&times;</span>
+  <img id="modalImg" src="photos/_KO_0943.JPG" alt="BEST Hackathon 2025" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 16px rgba(10,60,48,0.25);">
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var img = document.getElementById('itExpImg');
+    var modal = document.getElementById('imgModal');
+    var modalImg = document.getElementById('modalImg');
+    var closeModal = document.getElementById('closeModal');
+    if(img && modal && modalImg && closeModal) {
+      img.onclick = function() {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+      };
+      closeModal.onclick = function() {
+        modal.style.display = 'none';
+      };
+      modal.onclick = function(e) {
+        if(e.target === modal) modal.style.display = 'none';
+      };
+    }
+  });
+</script>
 </body>
 </html>
