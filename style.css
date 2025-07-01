@@ -25,7 +25,7 @@ nav ul {
   list-style: none;
   padding: 24px 40px 0 40px;
   margin: 0;
-  background: #878672;
+  background: #FDFBD4;
   border-radius: 12px 12px 0 0;
 }
 
@@ -42,11 +42,11 @@ nav ul .logo {
   text-align: center;
   line-height: 1;
   letter-spacing: 2px;
-  color: #D9D7B6;
+  color: #878672;
 }
 
 nav ul li a {
-  color: #D9D7B6;
+  color: #878672;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -167,7 +167,7 @@ footer {
   padding: 10px;
   background: #878672;
   color: #D9D7B6;
-  position: fixed;
+  position: static;
   width: 100%;
-  bottom: 0;
+  bottom: unset;
 }
