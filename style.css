@@ -25,7 +25,7 @@ nav ul {
   list-style: none;
   padding: 24px 40px 0 40px;
   margin: 0;
-  background: #878672;
+  background: #0A3C30;
   border-radius: 0;
 }
 
@@ -149,7 +149,7 @@ ul li, .skills-list li {
 }
 
 header {
-  background: #878672;
+  background: #0A3C30;
   color: #D9D7B6;
   padding: 20px 0;
   text-align: center;
@@ -167,7 +167,7 @@ section {
 footer {
   text-align: center;
   padding: 10px;
-  background: #878672;
+  background: #0A3C30;
   color: #D9D7B6;
   position: static;
   width: 100%;
