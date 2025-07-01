@@ -81,6 +81,20 @@
       </div>
     </section>
 
+    <!-- Floating Contact Button -->
+    <button id="contact-float-btn" title="Contact" style="position: fixed; bottom: 32px; right: 32px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #0A3C30; color: #D9D7B6; border: none; box-shadow: 0 2px 8px rgba(10,60,48,0.15); font-size: 2em; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, transform 0.2s;">
+      <span aria-hidden="true">📞</span>
+    </button>
+    <script>
+      document.getElementById('contact-float-btn').onclick = function() {
+        var contactSection = document.getElementById('kontakt');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+    </script>
+    <!-- End Floating Contact Button -->
+
     <footer>
         <p>&copy; 2024 Никола Ќупев</p>
     </footer>
