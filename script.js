@@ -47,23 +47,40 @@ window.addEventListener('DOMContentLoaded', function() {
     appearOnScroll.observe(fader);
   });
 
-  // Send message button animation (now using sendVideo in contact-illustration)
+  // Send message button: show custom prompt
   const sendBtn = document.getElementById('sendBtn');
-  const sendVideo = document.getElementById('sendVideo');
   const contactForm = document.querySelector('.contact-form');
 
-  if (sendBtn && sendVideo && contactForm) {
-    sendBtn.addEventListener('click', function(e) {
+  if (sendBtn && contactForm) {
+    contactForm.addEventListener('submit', function(e) {
       e.preventDefault(); // Prevent form submission
-      sendBtn.style.display = 'none';
-      sendVideo.style.display = 'inline-block';
-      sendVideo.currentTime = 0;
-      sendVideo.play();
-    });
-
-    sendVideo.addEventListener('ended', function() {
-      sendVideo.style.display = 'none';
-      sendBtn.style.display = 'inline-block';
+      // Create or reuse the prompt
+      let prompt = document.getElementById('customPrompt');
+      if (!prompt) {
+        prompt = document.createElement('div');
+        prompt.id = 'customPrompt';
+        prompt.style.position = 'relative';
+        prompt.style.marginBottom = '18px';
+        prompt.style.padding = '16px 32px';
+        prompt.style.background = '#0A3C30';
+        prompt.style.color = '#D9D7B6';
+        prompt.style.fontWeight = 'bold';
+        prompt.style.fontSize = '1.15em';
+        prompt.style.borderRadius = '12px';
+        prompt.style.boxShadow = '0 2px 8px rgba(10,60,48,0.10)';
+        prompt.style.textAlign = 'center';
+        prompt.style.letterSpacing = '1px';
+        prompt.style.zIndex = '10';
+        contactForm.parentNode.insertBefore(prompt, contactForm);
+      }
+      prompt.textContent = 'Thanks for your message';
+      prompt.style.display = 'block';
+      // Hide after 2.5 seconds
+      setTimeout(function() {
+        prompt.style.display = 'none';
+      }, 2500);
+      // Optionally, reset the form
+      contactForm.reset();
     });
   }
 });
