@@ -19,24 +19,24 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="fade-in-on-scroll" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; display: flex; align-items: center; justify-content: space-between; padding: 48px 0 32px 0; max-width: none; border-bottom: 1px dashed #D9D7B6; background: #fff;">
-      <div style="flex: 1; min-width: 300px; padding-left: 32px; padding-right: 32px; display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <h2 style="font-size: 2.2em; font-weight: 400; margin-bottom: 12px; line-height: 1.2; color: #0A3C30;">
-          HEY! <span style="font-weight: 700; color: #545333;">I'm Nikola,</span><br>
-          <span style="font-weight: 700; color: #0A3C30;">WEB DESIGNER & DEVELOPER</span><br>
-          BASED IN <span style="font-weight: 700; color: #545333;">SKOPJE</span>
+    <section id="hero" class="fade-in-on-scroll hero-section">
+      <div class="hero-left">
+        <h2 class="hero-title">
+          HEY! <span class="bold1">I'm Nikola,</span><br>
+          <span class="bold2">WEB DESIGNER & DEVELOPER</span><br>
+          BASED IN <span class="bold3">SKOPJE</span>
         </h2>
-        <p style="margin-bottom: 24px; color: #545333; max-width: 420px;">
+        <p class="hero-desc">
           As a person passionate about technology and design, I enjoy creating modern and functional web solutions. I love learning new things and collaborating with others.
         </p>
-        <a href="#kontakt" style="display: inline-block; background: #0A3C30; color: #fff; padding: 12px 28px; border-radius: 24px; font-weight: 600; text-decoration: none; margin-bottom: 18px; transition: background 0.2s;">Contact Me</a>
-        <div style="color: #545333; font-size: 1em; margin-top: 8px;">
-          <span style="font-size: 1.1em;">&#x25CF;</span> UI/UX &ndash; WEB DESIGN &ndash; FRONTEND
+        <a href="#kontakt" class="hero-btn">Contact Me</a>
+        <div class="hero-subtitle">
+          <span class="dot">&#x25CF;</span> UI/UX &ndash; WEB DESIGN &ndash; FRONTEND
         </div>
       </div>
-      <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <div style="width: 320px; height: 320px; border-radius: 50%; overflow: hidden; box-shadow: 0 2px 16px rgba(10,60,48,0.10); border: 6px solid #D9D7B6; background: #fff; position: relative;">
-          <img src="C:\Users\Dell\Desktop\niki\Web Design\photos\IMG_20241129_002403_683.jpg" alt="Nikola Kjupev" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.12);">
+      <div class="hero-right">
+        <div class="hero-img-wrapper">
+          <img src="C:\Users\Dell\Desktop\niki\Web Design\photos\IMG_20241129_002403_683.jpg" alt="Nikola Kjupev">
         </div>
       </div>
     </section>
@@ -72,18 +72,18 @@
     <section id="certificates" class="fade-in-on-scroll">
         <h2>Certificates</h2>
         <ul>
-            <li>Certificate of Participation – Erasmus+ Youth Exchange, Neu Anspach, Germany (2024)</li>
-            <li>Certificate of Participation – Erasmus+ Youth Exchange, Cortes de la Frontera, Spain (2025)</li>
-            <li>Certificate of Participation – Erasmus+ Youth Exchange, Paris, France (2023)</li>
-            <li>Certificate of Completion – IT Learn Project, Spain (2025)</li>
-            <li>Certificate of Completion – Maker Movement & Technology Project, Germany (2024)</li>
+            <li style="margin-bottom: 14px;">Certificate of Participation – Erasmus+ Youth Exchange, Neu Anspach, Germany (2024)</li>
+            <li style="margin-bottom: 14px;">Certificate of Participation – Erasmus+ Youth Exchange, Cortes de la Frontera, Spain (2025)</li>
+            <li style="margin-bottom: 14px;">Certificate of Participation – Erasmus+ Youth Exchange, Paris, France (2023)</li>
+            <li style="margin-bottom: 14px;">Certificate of Completion – IT Learn Project, Spain (2025)</li>
+            <li style="margin-bottom: 14px;">Certificate of Completion – Maker Movement & Technology Project, Germany (2024)</li>
         </ul>
     </section>
 
-    <section id="kontakt" class="fade-in-on-scroll" style="padding: 40px 0;">
-      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;">
-        <form class="contact-form" style="background: #D9D7B6; border-radius: 16px; padding: 32px 24px; min-width: 320px; box-shadow: 0 2px 8px rgba(10,60,48,0.08); display: flex; flex-direction: column; gap: 18px;">
-          <h2 style="color: #0A3C30; margin-bottom: 10px;">Contact</h2>
+    <section id="kontakt" class="fade-in-on-scroll contact-section">
+      <div class="contact-row">
+        <form class="contact-form">
+          <h2>Contact</h2>
           <div class="input-group">
             <input type="text" placeholder="Name" required>
             <span class="icon">👤</span>
@@ -98,6 +98,9 @@
           </div>
           <button type="submit" class="send-btn" id="sendBtn">SEND MESSAGE</button>
         </form>
+        <div class="contact-illustration">
+          <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/phone-2029649_1280.png" alt="Contact Illustration">
+        </div>
       </div>
     </section>
 
