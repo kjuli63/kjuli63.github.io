@@ -403,3 +403,9 @@ strong {
   display: block;
   overflow: hidden;
 }
+
+.active-link {
+  font-weight: bold;
+  color: #D9D7B6 !important;
+  text-decoration: none;
+}
