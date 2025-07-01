@@ -1,4 +1,4 @@
-// Skills - Show more
+
 const showMoreSkills = document.getElementById('showMoreSkills');
 if (showMoreSkills) {
     showMoreSkills.onclick = function() {
@@ -7,7 +7,6 @@ if (showMoreSkills) {
     }
 }
 
-// Travels - Show map
 const showMap = document.getElementById('showMap');
 if (showMap) {
     showMap.onclick = function() {
@@ -16,7 +15,6 @@ if (showMap) {
     }
 }
 
-// Hobbies - Show quote
 const showHobbyQuote = document.getElementById('showHobbyQuote');
 if (showHobbyQuote) {
     showHobbyQuote.onclick = function() {
@@ -25,7 +23,6 @@ if (showHobbyQuote) {
     }
 }
 
-// Fade-in on scroll animation
 window.addEventListener('DOMContentLoaded', function() {
   const faders = document.querySelectorAll('.fade-in-on-scroll');
   const appearOptions = {
@@ -47,14 +44,12 @@ window.addEventListener('DOMContentLoaded', function() {
     appearOnScroll.observe(fader);
   });
 
-  // Send message button: show custom prompt
   const sendBtn = document.getElementById('sendBtn');
   const contactForm = document.querySelector('.contact-form');
 
   if (sendBtn && contactForm) {
     contactForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent form submission
-      // Create or reuse the prompt
+      e.preventDefault(); 
       let prompt = document.getElementById('customPrompt');
       if (!prompt) {
         prompt = document.createElement('div');
@@ -75,11 +70,9 @@ window.addEventListener('DOMContentLoaded', function() {
       }
       prompt.textContent = 'Thanks for your message';
       prompt.style.display = 'block';
-      // Hide after 2.5 seconds
       setTimeout(function() {
         prompt.style.display = 'none';
       }, 2500);
-      // Optionally, reset the form
       contactForm.reset();
     });
   }
