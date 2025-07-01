@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
 body {
-  background: #f3f6f4; /* light gray */
-  font-family: 'Georgia', serif;
+  background: #909EAE;
+  font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
+  color: #736F60;
 }
 
 .container {
   max-width: 900px;
   margin: 40px auto;
-  background: #fff;
+  background: #AD9E90;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 24px rgba(92,141,197,0.12);
   overflow: hidden;
   position: relative;
 }
@@ -22,7 +25,7 @@ nav ul {
   list-style: none;
   padding: 24px 40px 0 40px;
   margin: 0;
-  background: #1b3a24; /* dark green */
+  background: #5C8DC5;
   border-radius: 12px 12px 0 0;
 }
 
@@ -33,32 +36,32 @@ nav ul li {
 }
 
 nav ul .logo {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 2em;
   font-weight: bold;
   text-align: center;
   line-height: 1;
   letter-spacing: 2px;
-  color: #f3f6f4; /* light gray */
+  color: #AD9E90;
 }
 
 nav ul li a {
-  color: #f3f6f4; /* light gray */
+  color: #AD9E90;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 nav ul li a:hover {
-  color: #a8e6a3; /* lighter green on hover */
+  color: #736F60;
 }
 
 nav input[type="text"] {
   padding: 6px 12px;
   border-radius: 20px;
-  border: 1px solid #1b3a24;
+  border: 1px solid #736F60;
   font-size: 1em;
-  background: #f3f6f4;
-  color: #1b3a24;
+  background: #AD9E90;
+  color: #736F60;
 }
 
 .main-content {
@@ -66,7 +69,7 @@ nav input[type="text"] {
   flex-direction: row;
   padding: 40px;
   gap: 40px;
-  background: #f3f6f4; /* light gray */
+  background: #909EAE;
 }
 
 .left {
@@ -82,18 +85,18 @@ nav input[type="text"] {
   object-fit: cover;
   border-radius: 8px;
   filter: grayscale(100%);
-  box-shadow: 0 2px 16px rgba(27,58,36,0.15);
+  box-shadow: 0 2px 16px rgba(92,141,197,0.15);
 }
 
 .right {
   flex: 2;
-  color: #1b3a24; /* dark green */
+  color: #736F60;
 }
 
 .right h4 {
   margin: 0;
   font-weight: normal;
-  color: #3e6b4c; /* medium green */
+  color: #5C8DC5;
   letter-spacing: 1px;
 }
 
@@ -102,26 +105,26 @@ nav input[type="text"] {
   font-size: 2.2em;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #1b3a24;
+  color: #5C8DC5;
 }
 
 .right .date {
-  color: #6e8c7a;
+  color: #736F60;
   font-size: 0.95em;
   margin-bottom: 18px;
 }
 
 .right blockquote {
   font-style: italic;
-  color: #3e6b4c;
-  background: #e6f2ea;
-  border-left: 4px solid #1b3a24;
+  color: #736F60;
+  background: #AD9E90;
+  border-left: 4px solid #5C8DC5;
   margin: 18px 0;
   padding: 12px 18px;
 }
 
 ul, .skills-list {
-  color: #1b3a24; /* dark green */
+  color: #736F60;
   font-size: 1.1em;
   padding-left: 20px;
 }
@@ -162,8 +165,8 @@ section {
 footer {
   text-align: center;
   padding: 10px;
-  background: #1b3a24;
-  color: #f3f6f4;
+  background: #5C8DC5;
+  color: #AD9E90;
   position: fixed;
   width: 100%;
   bottom: 0;
