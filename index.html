@@ -2,39 +2,54 @@
 <html lang="mk">
 <head>
     <meta charset="UTF-8">
-    <title>DAILY BUGLE - Персонална страна</title>
+    <title>Моја Персонална Веб Страница</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <header>
+        <h1>Добредојдовте на мојата веб страница!</h1>
         <nav>
             <ul>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">PERSONAS</a></li>
-                <li class="logo">DAILY<br>BUGLE</li>
-                <li><a href="#">LIVE</a></li>
-                <li><input type="text" placeholder="Search"></li>
+                <li><a href="#biografija">Биографија</a></li>
+                <li><a href="#obrazovanie">Образование</a></li>
+                <li><a href="#veshtini">Вештини</a></li>
+                <li><a href="#kontakt">Контакт</a></li>
             </ul>
         </nav>
-        <div class="main-content">
-            <div class="left">
-                <img src="./photos/received_249347543025457.jpeg" alt="Your Name">
-            </div>
-            <div class="right">
-                <h4>Your Name</h4>
-                <h1>Superhero or Supervillain</h1>
-                <p class="date">12 June 2024</p>
-                <p>
-                    Ова е кратка биографија за тебе. Опиши се, твоите интереси, професија, и што те прави уникатен/на.
-                </p>
-                <blockquote>
-                    "Инспиративен цитат или твоја животна филозофија."
-                </blockquote>
-                <p>
-                    Овде можеш да додадеш повеќе детали за твоите активности, вештини, образование, или што сакаш да споделиш.
-                </p>
-            </div>
-        </div>
-    </div>
+    </header>
+
+    <section id="biografija">
+        <h2>Биографија</h2>
+        <p>Тука напиши нешто за себе...</p>
+    </section>
+
+    <section id="obrazovanie">
+        <h2>Образование</h2>
+        <p>Тука опиши го твоето образование...</p>
+    </section>
+
+    <section id="veshtini">
+        <h2>Вештини</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>ЈаваСкрипт</li>
+            <!-- Додај уште -->
+        </ul>
+    </section>
+
+    <section id="kontakt">
+        <h2>Контакт</h2>
+        <form>
+            <label>Име: <input type="text" name="ime"></label><br>
+            <label>Е-пошта: <input type="email" name="email"></label><br>
+            <label>Порака: <textarea name="poraka"></textarea></label><br>
+            <button type="submit">Испрати</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Твоето Име</p>
+    </footer>
 </body>
 </html>
