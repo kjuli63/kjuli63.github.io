@@ -96,7 +96,7 @@
           </div>
           <button type="submit" class="send-btn" id="sendBtn">SEND MESSAGE</button>
           <div id="sendAnimation" style="display:none; text-align:center;">
-            <video id="sendVideo" width="120" height="40" style="vertical-align: middle;" src="photos/Animation - 1751385486708.mp4"></video>
+            <video id="sendVideo" width="120" height="40" style="vertical-align: middle;" src="./photos/Animation - 1751386608534.mp4"></video>
           </div>
         </form>
         <div class="contact-illustration" style="min-width: 220px;">
@@ -109,49 +109,5 @@
         <p>&copy; 2025 Никола Ќупев</p>
     </footer>
 
-    <script>
-      // Fade-in on scroll animation
-      document.addEventListener('DOMContentLoaded', function() {
-        const faders = document.querySelectorAll('.fade-in-on-scroll');
-        const appearOptions = {
-          threshold: 0.15,
-          rootMargin: '0px 0px -40px 0px'
-        };
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-          });
-        }, appearOptions);
-        faders.forEach(fader => {
-          fader.style.opacity = 0;
-          fader.style.transform = 'translateY(40px)';
-          fader.style.transition = 'opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1)';
-          appearOnScroll.observe(fader);
-        });
-      });
-
-      const sendBtn = document.getElementById('sendBtn');
-      const sendAnimation = document.getElementById('sendAnimation');
-      const sendVideo = document.getElementById('sendVideo');
-      const contactForm = document.querySelector('.contact-form');
-
-      if (sendBtn && sendAnimation && sendVideo && contactForm) {
-        sendBtn.addEventListener('click', function(e) {
-          e.preventDefault(); // Prevent form submission
-          sendBtn.style.display = 'none';
-          sendAnimation.style.display = 'inline-block';
-          sendVideo.currentTime = 0;
-          sendVideo.play();
-        });
-
-        sendVideo.addEventListener('ended', function() {
-          sendAnimation.style.display = 'none';
-          sendBtn.style.display = 'inline-block';
-        });
-      }
-    </script>
 </body>
 </html>
