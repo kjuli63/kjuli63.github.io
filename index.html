@@ -19,8 +19,8 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" style="display: flex; align-items: center; justify-content: space-between; padding: 48px 0 32px 0; max-width: 1100px; margin: 0 auto; border-bottom: 1px dashed #D9D7B6;">
-      <div style="flex: 1; min-width: 300px;">
+    <section id="hero" class="fade-in-on-scroll" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; display: flex; align-items: center; justify-content: space-between; padding: 48px 0 32px 0; max-width: none; border-bottom: 1px dashed #D9D7B6; background: #fff;">
+      <div style="flex: 1; min-width: 300px; padding-left: 32px; padding-right: 32px;">
         <h2 style="font-size: 2.2em; font-weight: 400; margin-bottom: 12px; line-height: 1.2; color: #0A3C30;">
           HEY! <span style="font-weight: 700; color: #545333;">I'm Nikola,</span><br>
           <span style="font-weight: 700; color: #0A3C30;">WEB DESIGNER & DEVELOPER</span><br>
@@ -47,13 +47,13 @@
       </div>
       <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
         <div style="width: 240px; height: 240px; border-radius: 50%; overflow: hidden; box-shadow: 0 2px 16px rgba(10,60,48,0.10); border: 6px solid #D9D7B6; background: #fff; position: relative;">
-          <img src="your-photo.jpg" alt="Nikola Kjupev" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="./photos/IMG_20250629_120000.jpg" alt="Nikola Kjupev" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
       </div>
     </section>
     <!-- End Hero Section -->
 
-    <section id="biografija">
+    <section id="biografija" class="fade-in-on-scroll">
         <h2>Biography</h2>
         <p>
             I was born in Skopje in 2005. I completed my primary and secondary education in Skopje.
@@ -64,7 +64,7 @@
         </p>
     </section>
 
-    <section id="obrazovanie">
+    <section id="obrazovanie" class="fade-in-on-scroll">
         <h2>Education</h2>
         <ul style="list-style: disc; padding-left: 20px;">
             <li style="margin-bottom: 18px;">
@@ -80,7 +80,7 @@
         </ul>
     </section>
 
-    <section id="veshtini">
+    <section id="veshtini" class="fade-in-on-scroll">
         <h2>Skills</h2>
         <ul>
             <li>HTML</li>
@@ -88,7 +88,8 @@
             <li>JavaScript</li>
         </ul>
     </section>
-    <section id="kontakt" style="padding: 40px 0;">
+
+    <section id="kontakt" class="fade-in-on-scroll" style="padding: 40px 0;">
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;">
         <form class="contact-form" style="background: #D9D7B6; border-radius: 16px; padding: 32px 24px; min-width: 320px; box-shadow: 0 2px 8px rgba(10,60,48,0.08); display: flex; flex-direction: column; gap: 18px;">
           <h2 style="color: #0A3C30; margin-bottom: 10px;">Contact</h2>
@@ -115,5 +116,30 @@
     <footer>
         <p>&copy; 2025 Никола Ќупев</p>
     </footer>
+
+    <script>
+      // Fade-in on scroll animation
+      document.addEventListener('DOMContentLoaded', function() {
+        const faders = document.querySelectorAll('.fade-in-on-scroll');
+        const appearOptions = {
+          threshold: 0.15,
+          rootMargin: '0px 0px -40px 0px'
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          });
+        }, appearOptions);
+        faders.forEach(fader => {
+          fader.style.opacity = 0;
+          fader.style.transform = 'translateY(40px)';
+          fader.style.transition = 'opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1)';
+          appearOnScroll.observe(fader);
+        });
+      });
+    </script>
 </body>
 </html>
