@@ -173,3 +173,85 @@ footer {
   width: 100%;
   bottom: unset;
 }
+
+.contact-form {
+  background: #D9D7B6;
+  border-radius: 16px;
+  padding: 32px 24px;
+  min-width: 320px;
+  box-shadow: 0 2px 8px rgba(10,60,48,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form h2 {
+  color: #0A3C30;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px 38px 10px 12px;
+  border: 2px solid #0A3C30;
+  border-radius: 8px;
+  background: #FDFBD4;
+  color: #545333;
+  font-size: 1em;
+  font-family: 'Rubik', sans-serif;
+  outline: none;
+  resize: none;
+  transition: border 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border: 2px solid #878672;
+}
+
+.input-group .icon {
+  position: absolute;
+  right: 10px;
+  color: #0A3C30;
+  font-size: 1.2em;
+  pointer-events: none;
+}
+
+.send-btn {
+  background: #0A3C30;
+  color: #D9D7B6;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-top: 8px;
+}
+
+.send-btn:hover {
+  background: #878672;
+  color: #FDFBD4;
+  transform: scale(1.04);
+}
+
+@media (max-width: 800px) {
+  #kontakt > div {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .contact-illustration {
+    margin-top: 16px;
+  }
+}
