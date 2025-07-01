@@ -20,11 +20,13 @@ body {
 
 nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  list-style: none;
-  padding: 24px 40px 0 40px;
+  gap: 32px;
   margin: 0;
+  padding: 24px 40px 0 40px;
+  min-height: 60px;
+  list-style: none;
   background: #0A3C30;
   border-radius: 0;
 }
