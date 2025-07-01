@@ -82,10 +82,47 @@
     </section>
 
     <!-- Floating Contact Button -->
-    <button id="contact-float-btn" title="Contact" style="position: fixed; bottom: 32px; right: 32px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #0A3C30; color: #D9D7B6; border: none; box-shadow: 0 2px 8px rgba(10,60,48,0.15); font-size: 2em; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, transform 0.2s;">
-      <span aria-hidden="true">📞</span>
+    <button id="contact-float-btn" title="Contact" style="position: absolute; top: 0; right: -80px; z-index: 1000; width: 56px; height: 56px; border-radius: 50%; background: #fff; color: #fff; border: 3px solid #0A3C30; box-shadow: 0 2px 8px rgba(10,60,48,0.15); font-size: 2em; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, transform 0.2s, opacity 0.2s;">
+      <span aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0A3C30" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a2 2 0 0 1 2 1.72c.13 1.05.37 2.07.72 3.06a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.99.35 2.01.59 3.06.72A2 2 0 0 1 22 16.92z"/></svg>
+      </span>
     </button>
     <script>
+      // Position the button relative to the biography section
+      function positionContactBtn() {
+        var bio = document.getElementById('biografija');
+        var btn = document.getElementById('contact-float-btn');
+        if (bio && btn) {
+          var rect = bio.getBoundingClientRect();
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          btn.style.top = (rect.top + scrollTop + 20) + 'px';
+          btn.style.right = (window.innerWidth - (rect.right + 20)) + 'px';
+          btn.style.position = 'absolute';
+        }
+      }
+      window.addEventListener('resize', positionContactBtn);
+      window.addEventListener('scroll', positionContactBtn);
+      document.addEventListener('DOMContentLoaded', positionContactBtn);
+
+      // Hide the button when contact section is in view
+      function toggleContactBtnVisibility() {
+        var btn = document.getElementById('contact-float-btn');
+        var contact = document.getElementById('kontakt');
+        if (btn && contact) {
+          var contactRect = contact.getBoundingClientRect();
+          var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          if (contactRect.top < windowHeight && contactRect.bottom > 0) {
+            btn.style.opacity = '0';
+            btn.style.pointerEvents = 'none';
+          } else {
+            btn.style.opacity = '1';
+            btn.style.pointerEvents = 'auto';
+          }
+        }
+      }
+      window.addEventListener('scroll', toggleContactBtnVisibility);
+      document.addEventListener('DOMContentLoaded', toggleContactBtnVisibility);
+
       document.getElementById('contact-float-btn').onclick = function() {
         var contactSection = document.getElementById('kontakt');
         if (contactSection) {
