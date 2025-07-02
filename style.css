@@ -409,3 +409,181 @@ strong {
   color: #D9D7B6 !important;
   text-decoration: none;
 }
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0A3C30;
+  color: #D9D7B6;
+  padding: 20px 40px;
+}
+
+.site-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+}
+
+.education-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.education-item {
+  margin-bottom: 18px;
+}
+
+.edu-date {
+  color: #878672;
+}
+
+.certificates-list {
+  padding-left: 0;
+}
+
+.certificate-item {
+  margin-bottom: 14px;
+}
+
+.contact-row {
+  justify-content: center;
+}
+
+/* IT EXPERIENCE ROADMAP */
+.it-roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.it-roadmap-title {
+  margin-bottom: 24px;
+}
+.roadmap-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 32px;
+}
+.roadmap-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.roadmap-emoji {
+  font-size: 2em;
+}
+.roadmap-desc {
+  margin-top: 8px;
+  text-align: center;
+  max-width: 180px;
+}
+.roadmap-line {
+  width: 48px;
+  height: 4px;
+  background: #D9D7B6;
+  align-self: center;
+  border-radius: 2px;
+}
+
+/* TRAVELS */
+.travels-list {
+  list-style: none;
+  padding-left: 0;
+}
+.travel-desc {
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+/* HOBBIES */
+.hobbies-main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+.hobbies-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.hobbies-list {
+  margin: 0;
+}
+.hobby-img {
+  filter: none;
+}
+.hobby-caption {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #0A3C30;
+}
+.hobbies-img-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hobby-jdilla-img {
+  width: 220px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(10,60,48,0.08);
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.hobby-spotify-link {
+  margin-top: 8px;
+  text-align: center;
+  width: 100%;
+}
+.spotify-link {
+  color: #1DB954;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* MODAL (IT EXPERIENCE) */
+#imgModal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  align-items: center;
+  justify-content: center;
+}
+#closeModal {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  color: #fff;
+  font-size: 2.5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+#modalImg {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(10,60,48,0.25);
+}

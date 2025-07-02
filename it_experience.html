@@ -8,48 +8,48 @@
 <body>
 <div class="container">
     <nav>
-        <ul style="display: flex; justify-content: center; align-items: center; gap: 32px; margin: 0; padding: 0; list-style: none;">
+        <ul class="main-nav">
             <li><a href="index.html">HOME</a></li>
             <li><a href="it_experience.html" class="active-link">IT EXPERIENCE</a></li>
             <li><a href="travels.html">TRAVELS</a></li>
             <li><a href="hobbies.html">HOBBIES</a></li>
         </ul>
     </nav>
-    <div class="main-content" style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
-        <h2 style="margin-bottom: 24px;">IT Experience Roadmap</h2>
-        <div class="roadmap-container" style="display: flex; flex-direction: row; align-items: flex-start; gap: 32px; justify-content: center; width: 100%; margin-bottom: 32px;">
-          <div class="roadmap-step" style="display: flex; flex-direction: column; align-items: center;">
-            <div style="font-size: 2em;">🎓</div>
-            <div style="margin-top: 8px; text-align: center; max-width: 180px;">Semos Education: Basics of C++ (2020)</div>
+    <div class="main-content it-roadmap">
+        <h2 class="it-roadmap-title">IT Experience Roadmap</h2>
+        <div class="roadmap-container">
+          <div class="roadmap-step">
+            <div class="roadmap-emoji">🎓</div>
+            <div class="roadmap-desc">Semos Education: Basics of C++ (2020)</div>
           </div>
-          <div style="width: 48px; height: 4px; background: #D9D7B6; align-self: center; border-radius: 2px;"></div>
-          <div class="roadmap-step" style="display: flex; flex-direction: column; align-items: center;">
-            <div style="font-size: 2em;">💻</div>
-            <div style="margin-top: 8px; text-align: center; max-width: 180px;">Semos Education: Advanced C++ (2020)</div>
+          <div class="roadmap-line"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-emoji">💻</div>
+            <div class="roadmap-desc">Semos Education: Advanced C++ (2020)</div>
           </div>
-          <div style="width: 48px; height: 4px; background: #D9D7B6; align-self: center; border-radius: 2px;"></div>
-          <div class="roadmap-step" style="display: flex; flex-direction: column; align-items: center;">
-            <div style="font-size: 2em;">🌐</div>
-            <div style="margin-top: 8px; text-align: center; max-width: 180px;">Semos Education: Basics of HTML & CSS (2021)</div>
+          <div class="roadmap-line"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-emoji">🌐</div>
+            <div class="roadmap-desc">Semos Education: Basics of HTML & CSS (2021)</div>
           </div>
-          <div style="width: 48px; height: 4px; background: #D9D7B6; align-self: center; border-radius: 2px;"></div>
-          <div class="roadmap-step" style="display: flex; flex-direction: column; align-items: center;">
-            <div style="font-size: 2em;">📝</div>
-            <div style="margin-top: 8px; text-align: center; max-width: 180px;">Semos Education: Basics of Javascript (2022)</div>
+          <div class="roadmap-line"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-emoji">📝</div>
+            <div class="roadmap-desc">Semos Education: Basics of Javascript (2022)</div>
           </div>
-          <div style="width: 48px; height: 4px; background: #D9D7B6; align-self: center; border-radius: 2px;"></div>
-          <div class="roadmap-step" style="display: flex; flex-direction: column; align-items: center;">
-            <div style="font-size: 2em;">🏆</div>
-            <div style="margin-top: 8px; text-align: center; max-width: 180px;">2nd place at BEST Hackathon 2025</div>
+          <div class="roadmap-line"></div>
+          <div class="roadmap-step">
+            <div class="roadmap-emoji">🏆</div>
+            <div class="roadmap-desc">2nd place at BEST Hackathon 2025</div>
           </div>
         </div>
     </div>
 </div>
 
 <!-- Modal for full image -->
-<div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
-  <span id="closeModal" style="position:absolute; top:32px; right:48px; color:#fff; font-size:2.5em; cursor:pointer; font-weight:bold;">&times;</span>
-  <img id="modalImg" src="photos/J-Dilla.jpg" alt="BEST Hackathon 2025" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 16px rgba(10,60,48,0.25);">
+<div id="imgModal">
+  <span id="closeModal">&times;</span>
+  <img id="modalImg" src="photos/J-Dilla.jpg" alt="BEST Hackathon 2025">
 </div>
 
 <script>

@@ -1,4 +1,3 @@
-
 const showMoreSkills = document.getElementById('showMoreSkills');
 if (showMoreSkills) {
     showMoreSkills.onclick = function() {
@@ -75,5 +74,23 @@ window.addEventListener('DOMContentLoaded', function() {
       }, 2500);
       contactForm.reset();
     });
+  }
+
+  // Modal for full image (IT EXPERIENCE)
+  var img = document.getElementById('itExpImg');
+  var modal = document.getElementById('imgModal');
+  var modalImg = document.getElementById('modalImg');
+  var closeModal = document.getElementById('closeModal');
+  if(img && modal && modalImg && closeModal) {
+    img.onclick = function() {
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+    };
+    closeModal.onclick = function() {
+      modal.style.display = 'none';
+    };
+    modal.onclick = function(e) {
+      if(e.target === modal) modal.style.display = 'none';
+    };
   }
 });
